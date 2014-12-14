@@ -54,7 +54,7 @@
     "shortName": "Beer O'Clock",
     "uuid": "63717839-2203-48aa-9fe4-edcc5f81c52a",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }
