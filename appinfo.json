@@ -29,8 +29,13 @@
                 "type": "font"
             },
             {
-                "file": "images/boc.png",
-                "name": "IMAGES_BOC_PNG",
+                "file": "images/beer.png",
+                "name": "IMAGES_BEER_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/mug.png",
+                "name": "IMAGES_MUG_PNG",
                 "type": "png"
             },
             {
@@ -40,13 +45,8 @@
                 "type": "png"
             },
             {
-                "file": "images/mug.png",
-                "name": "IMAGES_MUG_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/beer.png",
-                "name": "IMAGES_BEER_PNG",
+                "file": "images/boc.png",
+                "name": "IMAGES_BOC_PNG",
                 "type": "png"
             }
         ]

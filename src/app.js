@@ -69,15 +69,11 @@ bocImg = new UI.Image({
  * Calculate the current offset number and return it.
  */
 var calculateOffset = function(date) {
-  var offset,
+  var offset = 0,
       totalMinutes = (END_HOUR - START_HOUR) * 60,
       currentMinutes = (date.getHours() * 60) + date.getMinutes();
   
-  if (date.getHours() < START_HOUR) {
-    offset = 0;
-  } else {
-    offset = STARTING_BEER_Y - ((currentMinutes / totalMinutes) * STARTING_BEER_Y);
-  }  
+  offset = STARTING_BEER_Y - ((currentMinutes / totalMinutes) * STARTING_BEER_Y);  
   
   return offset;
 };
@@ -114,13 +110,14 @@ var startFilling = function() {
     checkForBoc(now);
   
     // only start filling after START_HOUR :D
+    var beerPos = beerImg.position();    
+    beerPos.y = STARTING_BEER_Y;
     if (now.getHours() >= START_HOUR) {
       // update beer position with animation!
-      var beerPos = beerImg.position();
-      beerPos.y = STARTING_BEER_Y + calculateOffset(now);
-      if (beerPos.y < 0) { beerPos.y = 0; }
-      beerImg.animate('position', beerPos, 1000);
+      beerPos.y += calculateOffset(now);
     }
+    if (beerPos.y < 0) { beerPos.y = 0; }
+    beerImg.animate('position', beerPos, 1000);
     
     // determine the next whole minute 
     // use a new date object for best accuracy
