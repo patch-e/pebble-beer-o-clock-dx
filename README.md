@@ -7,7 +7,7 @@ A silly Pebble watch face featuring a beer mug that fills until Beer O'Clock (ak
 
 This is a port of a Pebble 1.0 firmware watchface written by ThomW (http://www.lmnopc.com/) in Pebble's original C SDK.
 
-The intention the port was to get the watchface up and running on Pebble 2.0+ firmware.
+The intention of the port was to get the watchface up and running on Pebble 2.0+ firmware.
 
 The port was written using [Pebble.js](https://github.com/pebble/pebblejs) on [CloudPebble](https://cloudpebble.net).
 
